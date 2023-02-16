@@ -1,0 +1,17 @@
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Infrastructure\Infrastructure_CampFinalProject\bin\Debug\net6.0\Infrastructure_CampFinalProject.deps.json
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Infrastructure\Infrastructure_CampFinalProject\bin\Debug\net6.0\Infrastructure_CampFinalProject.dll
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Infrastructure\Infrastructure_CampFinalProject\bin\Debug\net6.0\Infrastructure_CampFinalProject.pdb
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Infrastructure\Infrastructure_CampFinalProject\bin\Debug\net6.0\Application_CampFinalProject.dll
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Infrastructure\Infrastructure_CampFinalProject\bin\Debug\net6.0\Domain_CampFinalProject.dll
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Infrastructure\Infrastructure_CampFinalProject\bin\Debug\net6.0\Application_CampFinalProject.pdb
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Infrastructure\Infrastructure_CampFinalProject\bin\Debug\net6.0\Domain_CampFinalProject.pdb
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Infrastructure\Infrastructure_CampFinalProject\obj\Debug\net6.0\Infrastructure_CampFinalProject.csproj.AssemblyReference.cache
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Infrastructure\Infrastructure_CampFinalProject\obj\Debug\net6.0\Infrastructure_CampFinalProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Infrastructure\Infrastructure_CampFinalProject\obj\Debug\net6.0\Infrastructure_CampFinalProject.AssemblyInfoInputs.cache
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Infrastructure\Infrastructure_CampFinalProject\obj\Debug\net6.0\Infrastructure_CampFinalProject.AssemblyInfo.cs
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Infrastructure\Infrastructure_CampFinalProject\obj\Debug\net6.0\Infrastructure_CampFinalProject.csproj.CoreCompileInputs.cache
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Infrastructure\Infrastructure_CampFinalProject\obj\Debug\net6.0\Infrastructure_CampFinalProject.csproj.CopyComplete
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Infrastructure\Infrastructure_CampFinalProject\obj\Debug\net6.0\Infrastructure_CampFinalProject.dll
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Infrastructure\Infrastructure_CampFinalProject\obj\Debug\net6.0\refint\Infrastructure_CampFinalProject.dll
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Infrastructure\Infrastructure_CampFinalProject\obj\Debug\net6.0\Infrastructure_CampFinalProject.pdb
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Infrastructure\Infrastructure_CampFinalProject\obj\Debug\net6.0\ref\Infrastructure_CampFinalProject.dll

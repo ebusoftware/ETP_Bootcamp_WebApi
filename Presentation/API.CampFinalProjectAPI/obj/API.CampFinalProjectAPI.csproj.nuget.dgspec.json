@@ -4,14 +4,86 @@
     "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Presentation\\API.CampFinalProjectAPI\\API.CampFinalProjectAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Presentation\\API.CampFinalProjectAPI\\API.CampFinalProjectAPI.csproj": {
+    "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Core\\Application_CampFinalProject\\Application_CampFinalProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Presentation\\API.CampFinalProjectAPI\\API.CampFinalProjectAPI.csproj",
-        "projectName": "API.CampFinalProjectAPI",
-        "projectPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Presentation\\API.CampFinalProjectAPI\\API.CampFinalProjectAPI.csproj",
+        "projectUniqueName": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Core\\Application_CampFinalProject\\Application_CampFinalProject.csproj",
+        "projectName": "Application_CampFinalProject",
+        "projectPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Core\\Application_CampFinalProject\\Application_CampFinalProject.csproj",
         "packagesPath": "C:\\Users\\e3b8u\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Presentation\\API.CampFinalProjectAPI\\obj\\",
+        "outputPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Core\\Application_CampFinalProject\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\e3b8u\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Core\\Domain_CampFinalProject\\Domain_CampFinalProject.csproj": {
+                "projectPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Core\\Domain_CampFinalProject\\Domain_CampFinalProject.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Core\\Domain_CampFinalProject\\Domain_CampFinalProject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Core\\Domain_CampFinalProject\\Domain_CampFinalProject.csproj",
+        "projectName": "Domain_CampFinalProject",
+        "projectPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Core\\Domain_CampFinalProject\\Domain_CampFinalProject.csproj",
+        "packagesPath": "C:\\Users\\e3b8u\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Core\\Domain_CampFinalProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
@@ -47,6 +119,250 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Infrastructure\\Infrastructure_CampFinalProject\\Infrastructure_CampFinalProject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Infrastructure\\Infrastructure_CampFinalProject\\Infrastructure_CampFinalProject.csproj",
+        "projectName": "Infrastructure_CampFinalProject",
+        "projectPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Infrastructure\\Infrastructure_CampFinalProject\\Infrastructure_CampFinalProject.csproj",
+        "packagesPath": "C:\\Users\\e3b8u\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Infrastructure\\Infrastructure_CampFinalProject\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\e3b8u\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Core\\Application_CampFinalProject\\Application_CampFinalProject.csproj": {
+                "projectPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Core\\Application_CampFinalProject\\Application_CampFinalProject.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Infrastructure\\Persistence_CampFinalProject\\Persistence_CampFinalProject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Infrastructure\\Persistence_CampFinalProject\\Persistence_CampFinalProject.csproj",
+        "projectName": "Persistence_CampFinalProject",
+        "projectPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Infrastructure\\Persistence_CampFinalProject\\Persistence_CampFinalProject.csproj",
+        "packagesPath": "C:\\Users\\e3b8u\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Infrastructure\\Persistence_CampFinalProject\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\e3b8u\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Core\\Application_CampFinalProject\\Application_CampFinalProject.csproj": {
+                "projectPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Core\\Application_CampFinalProject\\Application_CampFinalProject.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Presentation\\API.CampFinalProjectAPI\\API.CampFinalProjectAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Presentation\\API.CampFinalProjectAPI\\API.CampFinalProjectAPI.csproj",
+        "projectName": "API.CampFinalProjectAPI",
+        "projectPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Presentation\\API.CampFinalProjectAPI\\API.CampFinalProjectAPI.csproj",
+        "packagesPath": "C:\\Users\\e3b8u\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Presentation\\API.CampFinalProjectAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\e3b8u\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Core\\Application_CampFinalProject\\Application_CampFinalProject.csproj": {
+                "projectPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Core\\Application_CampFinalProject\\Application_CampFinalProject.csproj"
+              },
+              "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Infrastructure\\Infrastructure_CampFinalProject\\Infrastructure_CampFinalProject.csproj": {
+                "projectPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Infrastructure\\Infrastructure_CampFinalProject\\Infrastructure_CampFinalProject.csproj"
+              },
+              "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Infrastructure\\Persistence_CampFinalProject\\Persistence_CampFinalProject.csproj": {
+                "projectPath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Infrastructure\\Persistence_CampFinalProject\\Persistence_CampFinalProject.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"

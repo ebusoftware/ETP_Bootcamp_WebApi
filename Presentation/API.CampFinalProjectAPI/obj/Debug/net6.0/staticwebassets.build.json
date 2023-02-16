@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "LhhBNLRd7RgIhql616tBPUIFhuQH5EJea/Q8iqPg38M=",
+  "Source": "API.CampFinalProjectAPI",
+  "BasePath": "_content/API.CampFinalProjectAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "API.CampFinalProjectAPI\\wwwroot",
+      "Source": "API.CampFinalProjectAPI",
+      "ContentRoot": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Presentation\\API.CampFinalProjectAPI\\wwwroot\\",
+      "BasePath": "_content/API.CampFinalProjectAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

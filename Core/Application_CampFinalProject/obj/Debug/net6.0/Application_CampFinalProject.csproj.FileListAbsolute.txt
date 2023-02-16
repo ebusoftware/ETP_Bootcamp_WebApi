@@ -1,0 +1,15 @@
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Core\Application_CampFinalProject\bin\Debug\net6.0\Application_CampFinalProject.deps.json
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Core\Application_CampFinalProject\bin\Debug\net6.0\Application_CampFinalProject.dll
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Core\Application_CampFinalProject\bin\Debug\net6.0\Application_CampFinalProject.pdb
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Core\Application_CampFinalProject\bin\Debug\net6.0\Domain_CampFinalProject.dll
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Core\Application_CampFinalProject\bin\Debug\net6.0\Domain_CampFinalProject.pdb
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Core\Application_CampFinalProject\obj\Debug\net6.0\Application_CampFinalProject.csproj.AssemblyReference.cache
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Core\Application_CampFinalProject\obj\Debug\net6.0\Application_CampFinalProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Core\Application_CampFinalProject\obj\Debug\net6.0\Application_CampFinalProject.AssemblyInfoInputs.cache
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Core\Application_CampFinalProject\obj\Debug\net6.0\Application_CampFinalProject.AssemblyInfo.cs
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Core\Application_CampFinalProject\obj\Debug\net6.0\Application_CampFinalProject.csproj.CoreCompileInputs.cache
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Core\Application_CampFinalProject\obj\Debug\net6.0\Application_CampFinalProject.csproj.CopyComplete
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Core\Application_CampFinalProject\obj\Debug\net6.0\Application_CampFinalProject.dll
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Core\Application_CampFinalProject\obj\Debug\net6.0\refint\Application_CampFinalProject.dll
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Core\Application_CampFinalProject\obj\Debug\net6.0\Application_CampFinalProject.pdb
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Core\Application_CampFinalProject\obj\Debug\net6.0\ref\Application_CampFinalProject.dll
