@@ -1,4 +1,10 @@
+using Application_CampFinalProject;
+using Persistence_CampFinalProject;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddApplicationServices();
+builder.Services.AddPersistenceService();
 
 // Add services to the container.
 
