@@ -9,12 +9,13 @@ namespace Application_CampFinalProject.Repositories
 {
     public interface IWriteRepository<T>:IRepository<T> where T:Entity 
     {
-        Task<bool> AddAsync(T model);
+        Task<T> AddAsync(T model);
         Task<bool> AddRangeAsync(List<T> datas);
         bool Remove(T model);
-        Task<bool> RemoveAsync(int id);
+        Task<T> RemoveAsync(T entity);
         bool RemoveRange(List<T> datas);
         bool Update(T model);
+        Task<T> UpdateAsync(T entity);
         Task<int> SaveAsync();
     }
 }

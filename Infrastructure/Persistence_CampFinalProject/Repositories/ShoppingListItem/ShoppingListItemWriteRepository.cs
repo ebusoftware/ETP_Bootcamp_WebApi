@@ -1,12 +1,18 @@
-﻿using System;
+﻿using API.CampFinalProjectAPI.Contexts;
+using Application_CampFinalProject.Repositories;
+using Domain_CampFinalProject.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Persistence_CampFinalProject.Repositories.ShoppingListItem
+namespace Persistence_CampFinalProject.Repositories
 {
-    internal class ShoppingListItemWriteRepository
+    public class ShoppingListItemWriteRepository : WriteRepository<ShoppingListItem>, IShoppingListItemWriteRepository
     {
+        public ShoppingListItemWriteRepository(ShoppingListDbContext context) : base(context)
+        {
+        }
     }
 }

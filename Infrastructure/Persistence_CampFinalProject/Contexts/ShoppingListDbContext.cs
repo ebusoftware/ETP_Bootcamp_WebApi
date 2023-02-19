@@ -58,6 +58,27 @@ namespace API.CampFinalProjectAPI.Contexts
 
 
             base.OnModelCreating(modelBuilder);
+
+        }
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            /*ChangeTracker:Entityler üzerinde yapılan değişikliklerin ya da yeni eklenen verinin yakalanmasını sağlayan property dir.
+            Update operasyonlarında Track edilen verileri yakalayıp elde etmemizi sağlıyor.*/
+            var datas = ChangeTracker
+                .Entries<Entity>();
+            foreach (var data in datas)
+            {
+                _ = data.State switch
+                {
+                    EntityState.Added => data.Entity.CreatedDate = DateTime.UtcNow,
+                    EntityState.Modified => data.Entity.UpdatedDate = DateTime.UtcNow,
+                    _ => DateTime.UtcNow
+
+
+                };
+
+            }
+            return await base.SaveChangesAsync(cancellationToken);
         }
     }
 }

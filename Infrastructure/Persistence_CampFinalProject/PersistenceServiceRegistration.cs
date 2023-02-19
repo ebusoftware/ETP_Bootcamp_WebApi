@@ -25,22 +25,25 @@ namespace Persistence_CampFinalProject
                 options.Password.RequireUppercase = true;
             }).AddEntityFrameworkStores<ShoppingListDbContext>();
 
+            //Add DB CONTEXT
             services.AddDbContext<ShoppingListDbContext>(options => options.UseSqlServer(Configuration.ConnectionString));
 
-            services.AddSingleton<IProductReadRepository, ProductReadRepository>();
-            services.AddSingleton<IProductWriteRepository, ProductWriteRepository>();
+            //Add application services.
+            services.AddScoped<IProductReadRepository, ProductReadRepository>();
+            services.AddScoped<IProductWriteRepository, ProductWriteRepository>();
 
-            services.AddSingleton<IBrandWriteRepository, BrandWriteRepository>();
-            services.AddSingleton<IBrandReadRepository, BrandReadRepository>();
+            services.AddScoped<IBrandWriteRepository, BrandWriteRepository>();
+            services.AddScoped<IBrandReadRepository, BrandReadRepository>();
 
-            services.AddSingleton<ICategoryReadRepository, CategoryReadRepository>();
-            services.AddSingleton<ICategoryWriteRepository, CategoryWriteRepository>();
+            services.AddScoped<ICategoryReadRepository, CategoryReadRepository>();
+            services.AddScoped<ICategoryWriteRepository, CategoryWriteRepository>();
 
-            services.AddSingleton<IShoppingListWriteRepository, ShoppingListWriteRepository>();
-            services.AddSingleton<IShoppingListReadRepository, ShoppingListReadRepository>();
+            services.AddScoped<IShoppingListWriteRepository, ShoppingListWriteRepository>();
+            services.AddScoped<IShoppingListReadRepository, ShoppingListReadRepository>();
 
-            services.AddSingleton<IShoppingListItemReadRepository, ShoppingListItemReadRepository>();
-            services.AddSingleton<IShoppingListItemWriteRepository, ShoppingListItemWriteRepository>();
+            services.AddScoped<IShoppingListItemReadRepository, ShoppingListItemReadRepository>();
+            services.AddScoped<IShoppingListItemWriteRepository, ShoppingListItemWriteRepository>();
+            
 
 
         }

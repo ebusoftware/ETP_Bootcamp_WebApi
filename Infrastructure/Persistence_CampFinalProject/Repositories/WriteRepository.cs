@@ -23,10 +23,11 @@ namespace Persistence_CampFinalProject.Repositories
 
         public DbSet<T> Table => _context.Set<T>();
 
-        public async Task<bool> AddAsync(T model)
+        public async Task<T> AddAsync(T entity)
         {
-            EntityEntry<T> entityEntry = await Table.AddAsync(model);
-            return entityEntry.State == EntityState.Added;
+            _context.Entry(entity).State = EntityState.Added;
+            await _context.SaveChangesAsync();
+            return entity;
         }
 
         public async Task<bool> AddRangeAsync(List<T> datas)
@@ -41,10 +42,11 @@ namespace Persistence_CampFinalProject.Repositories
             return entityEntry.State == EntityState.Deleted;
         }
 
-        public async Task<bool> RemoveAsync(int id)
+        public async Task<T> RemoveAsync(T entity)
         {
-            T model = await Table.FirstOrDefaultAsync(data => data.Id == id);
-            return Remove(model);
+            _context.Entry(entity).State = EntityState.Deleted;
+            await _context.SaveChangesAsync();
+            return entity;
         }
 
         public bool RemoveRange(List<T> datas)
@@ -52,12 +54,19 @@ namespace Persistence_CampFinalProject.Repositories
             Table.RemoveRange(datas);
             return true;
         }
+        public async Task<T> UpdateAsync(T entity)
+        {
+            _context.Entry(entity).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return entity;
+        }
+        public async Task<int> SaveAsync()
+            => await _context.SaveChangesAsync();
+
         public bool Update(T model)
         {
             EntityEntry entityEntry = Table.Update(model);
             return entityEntry.State == EntityState.Modified;
         }
-        public async Task<int> SaveAsync()
-            => await _context.SaveChangesAsync();
     }
 }
