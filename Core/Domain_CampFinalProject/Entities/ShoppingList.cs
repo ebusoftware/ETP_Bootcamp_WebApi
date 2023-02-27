@@ -10,12 +10,13 @@ namespace Domain_CampFinalProject.Entities
 {
     public class ShoppingList:Entity
     {
+        public int ItemId { get; set; }
         public string UserId { get; set; }
         public string ListName { get; set; }
 
         public bool IsActive { get; set; } = true;
 
-        public ICollection<ShoppingListItem> ShoppingListItems { get; set; }
+        public ShoppingListItem ShoppingListItem { get; set; }
         public  AppUser AppUser { get; set; }
 
     }

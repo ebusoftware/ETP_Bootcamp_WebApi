@@ -1,4 +1,5 @@
 ﻿using Application_CampFinalProject.Dtos.Brand;
+using Application_CampFinalProject.Features;
 using Application_CampFinalProject.Features.Commands;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -10,6 +11,15 @@ namespace API.CampFinalProjectAPI.Controllers
     [ApiController]
     public class BrandController : BaseController
     {
+        [HttpGet]
+        public async Task<IActionResult> GetAll([FromQuery] GetAllBrandQuery getAllBrandQuery)
+        {
+
+            List<GetAllBrandDTO> resultModel = await Mediator.Send(getAllBrandQuery);
+            return Ok(resultModel);
+
+        }
+
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] CreateBrandCommand createBrandCommandRequest)
         {
@@ -30,5 +40,6 @@ namespace API.CampFinalProjectAPI.Controllers
             UpdateBrandDTO result = await Mediator.Send(updateBrandCommand);
             return Ok(result);
         }
+
     }
 }

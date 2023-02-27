@@ -9,6 +9,6 @@ namespace Application_CampFinalProject.Dtos.Brand
     public class GetAllBrandDTO
     {
         public int Id { get; set; }
-        public List<string> BrandName { get; set; }
+        public string BrandName { get; set; }
     }
 }

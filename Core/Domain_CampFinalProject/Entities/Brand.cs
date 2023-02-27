@@ -10,6 +10,6 @@ namespace Domain_CampFinalProject.Entities
     public class Brand:Entity
     {
         public string BrandName { get; set; }
-        public ICollection<Product> Products { get; set; }
+        public ICollection<Product>? Products { get; set; }
     }
 }

@@ -1,9 +1,12 @@
 ﻿using API.CampFinalProjectAPI.Contexts;
 using Application_CampFinalProject.Repositories;
+using Application_CampFinalProject.Services;
+using Application_CampFinalProject.Services.Authentications;
 using Domain_CampFinalProject.Entities.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence_CampFinalProject.Repositories;
+using Persistence_CampFinalProject.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,11 +21,11 @@ namespace Persistence_CampFinalProject
         {
             services.AddIdentity<AppUser, AppRole>(options =>
             {
-                options.Password.RequiredLength = 8;
-                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequiredLength = 3;
+                options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireDigit = false;
-                options.Password.RequireLowercase = true;
-                options.Password.RequireUppercase = true;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
             }).AddEntityFrameworkStores<ShoppingListDbContext>();
 
             //Add DB CONTEXT
@@ -44,6 +47,12 @@ namespace Persistence_CampFinalProject
             services.AddScoped<IShoppingListItemReadRepository, ShoppingListItemReadRepository>();
             services.AddScoped<IShoppingListItemWriteRepository, ShoppingListItemWriteRepository>();
             
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IExternalAuthentication, AuthService>();
+            services.AddScoped<IInternalAuthentication, AuthService>();
+
+
 
 
         }

@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 
 namespace Application_CampFinalProject.Features
 {
-    public class GetAllBrandQuery:IRequest<GetAllBrandDTO>
+    public class GetAllBrandQuery: IRequest<List<GetAllBrandDTO>>
     {
-        public class GetAllBrandQueryHandler : IRequestHandler<GetAllBrandQuery,GetAllBrandDTO>
+        public class GetAllBrandQueryHandler : IRequestHandler<GetAllBrandQuery, List<GetAllBrandDTO>>
         {
             private readonly IMapper _mapper;
             private readonly IBrandReadRepository _brandReadRepository;
@@ -24,11 +24,16 @@ namespace Application_CampFinalProject.Features
                 _brandReadRepository = brandReadRepository;
             }
 
-            public Task<GetAllBrandDTO> Handle(GetAllBrandQuery request, CancellationToken cancellationToken)
+            public async Task<List<GetAllBrandDTO>> Handle(GetAllBrandQuery request, CancellationToken cancellationToken)
             {
-                //List<Brand> brands = _brandReadRepository.GetAll().ToList();
-                //List<GetAllBrandDTO> getAllBrandDTO = _mapper.Map<GetAllBrandDTO>(brands);
-                //return getAllBrandDTO;
+                List<Brand> brands = await _brandReadRepository.GetAllAsync();
+                return brands.Select(e=> new GetAllBrandDTO 
+                {
+                    Id = e.Id,
+                    BrandName= e.BrandName,
+                }).ToList();
+                
+
             }
         }
     }

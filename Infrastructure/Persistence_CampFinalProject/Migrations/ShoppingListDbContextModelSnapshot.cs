@@ -34,10 +34,10 @@ namespace Persistence_CampFinalProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CreatedDate")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("UpdatedDate")
+                    b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -57,14 +57,13 @@ namespace Persistence_CampFinalProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CreatedDate")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("UpdatedDate")
+                    b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -182,13 +181,13 @@ namespace Persistence_CampFinalProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("BrandId")
+                    b.Property<int?>("BrandId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CategoryId")
+                    b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("CreatedDate")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
@@ -200,7 +199,7 @@ namespace Persistence_CampFinalProject.Migrations
                     b.Property<string>("ProductName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("UpdatedDate")
+                    b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -212,6 +211,37 @@ namespace Persistence_CampFinalProject.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("Domain_CampFinalProject.Entities.ProductImageFile", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Path")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Showcase")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Storage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductImageFile");
+                });
+
             modelBuilder.Entity("Domain_CampFinalProject.Entities.ShoppingList", b =>
                 {
                     b.Property<int>("Id")
@@ -220,29 +250,31 @@ namespace Persistence_CampFinalProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("AppUserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("CreatedDate")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<int>("ItemId")
+                        .HasColumnType("int");
+
                     b.Property<string>("ListName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("UpdatedDate")
+                    b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AppUserId");
+                    b.HasIndex("ItemId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("ShoppingLists");
                 });
@@ -255,7 +287,7 @@ namespace Persistence_CampFinalProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime>("CreatedDate")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("ProductId")
@@ -264,7 +296,7 @@ namespace Persistence_CampFinalProject.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("UpdatedDate")
+                    b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -380,34 +412,30 @@ namespace Persistence_CampFinalProject.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("ShoppingListShoppingListItem", b =>
+            modelBuilder.Entity("ProductProductImageFile", b =>
                 {
-                    b.Property<int>("ShoppingListItemsId")
+                    b.Property<int>("ProductImageFilesId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ShoppingListsId")
+                    b.Property<int>("ProductsId")
                         .HasColumnType("int");
 
-                    b.HasKey("ShoppingListItemsId", "ShoppingListsId");
+                    b.HasKey("ProductImageFilesId", "ProductsId");
 
-                    b.HasIndex("ShoppingListsId");
+                    b.HasIndex("ProductsId");
 
-                    b.ToTable("ShoppingListShoppingListItem");
+                    b.ToTable("ProductProductImageFile");
                 });
 
             modelBuilder.Entity("Domain_CampFinalProject.Entities.Product", b =>
                 {
                     b.HasOne("Domain_CampFinalProject.Entities.Brand", "Brand")
                         .WithMany("Products")
-                        .HasForeignKey("BrandId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BrandId");
 
                     b.HasOne("Domain_CampFinalProject.Entities.Category", "Category")
                         .WithMany("Products")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CategoryId");
 
                     b.Navigation("Brand");
 
@@ -416,11 +444,21 @@ namespace Persistence_CampFinalProject.Migrations
 
             modelBuilder.Entity("Domain_CampFinalProject.Entities.ShoppingList", b =>
                 {
+                    b.HasOne("Domain_CampFinalProject.Entities.ShoppingListItem", "ShoppingListItem")
+                        .WithMany("ShoppingLists")
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Domain_CampFinalProject.Entities.Identity.AppUser", "AppUser")
                         .WithMany("ShoppingLists")
-                        .HasForeignKey("AppUserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("AppUser");
+
+                    b.Navigation("ShoppingListItem");
                 });
 
             modelBuilder.Entity("Domain_CampFinalProject.Entities.ShoppingListItem", b =>
@@ -485,17 +523,17 @@ namespace Persistence_CampFinalProject.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ShoppingListShoppingListItem", b =>
+            modelBuilder.Entity("ProductProductImageFile", b =>
                 {
-                    b.HasOne("Domain_CampFinalProject.Entities.ShoppingListItem", null)
+                    b.HasOne("Domain_CampFinalProject.Entities.ProductImageFile", null)
                         .WithMany()
-                        .HasForeignKey("ShoppingListItemsId")
+                        .HasForeignKey("ProductImageFilesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain_CampFinalProject.Entities.ShoppingList", null)
+                    b.HasOne("Domain_CampFinalProject.Entities.Product", null)
                         .WithMany()
-                        .HasForeignKey("ShoppingListsId")
+                        .HasForeignKey("ProductsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -518,6 +556,11 @@ namespace Persistence_CampFinalProject.Migrations
             modelBuilder.Entity("Domain_CampFinalProject.Entities.Product", b =>
                 {
                     b.Navigation("ShoppingListItems");
+                });
+
+            modelBuilder.Entity("Domain_CampFinalProject.Entities.ShoppingListItem", b =>
+                {
+                    b.Navigation("ShoppingLists");
                 });
 #pragma warning restore 612, 618
         }

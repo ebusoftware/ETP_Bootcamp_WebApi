@@ -22,14 +22,25 @@ namespace Persistence_CampFinalProject.Repositories
 
         public DbSet<T> Table => _context.Set<T>(); //gerekli entity'i almak için Set methodunu kullandık. 
 
-        public IQueryable<T> GetAll() //Bütün kayıtları getir
-            => Table;
-
-        
-
-        public IQueryable<T> GetAsync(Expression<Func<T, bool>> predicate)
+        public IQueryable<T> GetAll(bool tracking = true)
         {
-            throw new NotImplementedException();
+            var query = Table.AsQueryable();
+            //eğer herhangi bir tracking istenmiyorsa, AsNoTrack fonksiyonu ile datanın track edilmesini engelliyoruz.
+            if (!tracking)
+            {
+                query = query.AsNoTracking();
+            }
+            return query;
+        }
+
+        public async Task<List<T>> GetAllAsync()
+        {
+            return await _context.Set<T>().ToListAsync();
+        }
+
+        public async Task<T?> GetAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await _context.Set<T>().FirstOrDefaultAsync(predicate);
         }
 
         public async Task<T> GetByIdAsync(int id)

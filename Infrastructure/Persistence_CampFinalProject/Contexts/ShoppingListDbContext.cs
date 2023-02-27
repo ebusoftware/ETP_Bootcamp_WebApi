@@ -40,20 +40,26 @@ namespace API.CampFinalProjectAPI.Contexts
 
             modelBuilder.Entity<ShoppingListItem>(entity =>
             {
-
+                
                 entity.HasOne(s => s.Product)
                     .WithMany(l => l.ShoppingListItems)
                     .HasForeignKey(s => s.ProductId);
 
             });
 
+            modelBuilder.Entity<ShoppingListItem>(entity =>
+            {
+
+                entity.HasMany(s => s.ShoppingLists)
+                    .WithOne(l => l.ShoppingListItem)
+                    .HasForeignKey(s=>s.ItemId);
+            });
             modelBuilder.Entity<ShoppingList>(entity =>
             {
 
-                entity.HasMany(s => s.ShoppingListItems)
-                    .WithMany(l => l.ShoppingLists);
-                    
-
+                entity.HasOne(s => s.AppUser)
+                    .WithMany(l => l.ShoppingLists)
+                    .HasForeignKey(s => s.UserId);
             });
 
 
