@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LhhBNLRd7RgIhql616tBPUIFhuQH5EJea/Q8iqPg38M=",
+  "Hash": "jj58Bit251MjPV3pV8UP11QbYWNVSoMhXhH7YpzG8Ak=",
   "Source": "API.CampFinalProjectAPI",
   "BasePath": "_content/API.CampFinalProjectAPI",
   "Mode": "Default",
@@ -15,5 +15,23 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Presentation\\API.CampFinalProjectAPI\\wwwroot\\product-images\\Files",
+      "SourceId": "API.CampFinalProjectAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Presentation\\API.CampFinalProjectAPI\\wwwroot\\",
+      "BasePath": "_content/API.CampFinalProjectAPI",
+      "RelativePath": "product-images/Files",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\product-images\\Files"
+    }
+  ]
 }
