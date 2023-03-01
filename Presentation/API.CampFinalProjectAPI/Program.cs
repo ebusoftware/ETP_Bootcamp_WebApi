@@ -1,5 +1,7 @@
 ﻿using Application_CampFinalProject;
 using Infrastructure_CampFinalProject;
+using Infrastructure_CampFinalProject.Services.Storage.Azure;
+using Infrastructure_CampFinalProject.Services.Storage.Local;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Persistence_CampFinalProject;
@@ -11,6 +13,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddApplicationServices();
 builder.Services.AddPersistenceService();
 builder.Services.AddInfrastructureServices();
+
+builder.Services.AddStorage<LocalStorage>();
 
 // Add services to the container.
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -57,8 +61,8 @@ app.UseHttpLogging();
 app.UseCors();
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
 app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 

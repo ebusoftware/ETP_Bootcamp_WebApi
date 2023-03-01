@@ -15,6 +15,7 @@ namespace Application_CampFinalProject
         {
             collection.AddMediatR(typeof(ApplicationServiceRegistration));
             collection.AddAutoMapper(Assembly.GetExecutingAssembly());
+
         }
 
     }

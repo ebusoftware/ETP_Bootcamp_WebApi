@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TKfGKomRN9iwLFUe8i3CAqzbA1+shhN48CKidwCv/M9vaxnim2kMczN3aTYP96L0YjO8+PtLfA1uBX8Rh7hfAA==",
+  "dgSpecHash": "OWuebyxFk8g+oeFeGio4HJ3/dZ1A7voZlpsqxDhsGxHwnbo9urQMd/tf7xPMCW0WYUaBjVdm4JkWWVRwkQ0Jog==",
   "success": true,
   "projectFilePath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Presentation\\API.CampFinalProjectAPI\\API.CampFinalProjectAPI.csproj",
   "expectedPackageFiles": [
@@ -47,6 +47,7 @@
     "C:\\Users\\e3b8u\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
     "C:\\Users\\e3b8u\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",
     "C:\\Users\\e3b8u\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\e3b8u\\.nuget\\packages\\microsoft.extensions.configuration.binder\\6.0.0\\microsoft.extensions.configuration.binder.6.0.0.nupkg.sha512",
     "C:\\Users\\e3b8u\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\6.0.0\\microsoft.extensions.configuration.fileextensions.6.0.0.nupkg.sha512",
     "C:\\Users\\e3b8u\\.nuget\\packages\\microsoft.extensions.configuration.json\\6.0.0\\microsoft.extensions.configuration.json.6.0.0.nupkg.sha512",
     "C:\\Users\\e3b8u\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.1\\microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",

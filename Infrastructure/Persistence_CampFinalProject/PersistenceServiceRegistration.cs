@@ -46,7 +46,10 @@ namespace Persistence_CampFinalProject
 
             services.AddScoped<IShoppingListItemReadRepository, ShoppingListItemReadRepository>();
             services.AddScoped<IShoppingListItemWriteRepository, ShoppingListItemWriteRepository>();
-            
+
+            services.AddScoped<IProductImageFileReadRepository, ProductImageFileReadRepository>();
+            services.AddScoped<IProductImageFileWriteRepository, ProductImageFileWriteRepository>();
+
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IExternalAuthentication, AuthService>();

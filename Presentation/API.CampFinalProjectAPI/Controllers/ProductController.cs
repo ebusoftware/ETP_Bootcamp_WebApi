@@ -1,4 +1,5 @@
 ﻿using Application_CampFinalProject.Dtos.Product;
+using Application_CampFinalProject.Dtos.ProductImageFile;
 using Application_CampFinalProject.Features.Commands;
 using Application_CampFinalProject.Features.Queries;
 using Microsoft.AspNetCore.Http;
@@ -35,6 +36,13 @@ namespace API.CampFinalProjectAPI.Controllers
         {
             UpdateProductDTO data = await Mediator.Send(updateProductCommand);
             return Ok(data);
+        }
+        [HttpPost("[action]")]
+        public async Task<IActionResult> Upload([FromQuery] UploadProductImageCommand uploadProductImageCommand)
+        {
+            uploadProductImageCommand.Files = Request.Form.Files;
+            UploadImageFileDTO response = await Mediator.Send(uploadProductImageCommand);
+            return Ok(response);
         }
     }
 }
