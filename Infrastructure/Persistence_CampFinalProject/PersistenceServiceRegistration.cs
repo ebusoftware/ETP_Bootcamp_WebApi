@@ -21,7 +21,7 @@ namespace Persistence_CampFinalProject
         {
             services.AddIdentity<AppUser, AppRole>(options =>
             {
-                options.Password.RequiredLength = 3;
+                options.Password.RequiredLength = 8;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireDigit = false;
                 options.Password.RequireLowercase = false;

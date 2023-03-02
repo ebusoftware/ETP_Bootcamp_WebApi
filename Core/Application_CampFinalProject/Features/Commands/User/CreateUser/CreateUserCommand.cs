@@ -1,4 +1,5 @@
 ﻿using Application_CampFinalProject.Dtos.User;
+using Application_CampFinalProject.Rules.User;
 using Application_CampFinalProject.Services;
 using MediatR;
 using System;
@@ -20,14 +21,16 @@ namespace Application_CampFinalProject.Features
         public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, CreateUserDTO>
         {
             private readonly IUserService _userService;
-
-            public CreateUserCommandHandler(IUserService userService)
+            private readonly UserBusinessRules _userBusinessRules;
+            public CreateUserCommandHandler(IUserService userService, UserBusinessRules userBusinessRules)
             {
                 _userService = userService;
+                _userBusinessRules = userBusinessRules;
             }
 
             public async Task<CreateUserDTO> Handle(CreateUserCommand request, CancellationToken cancellationToken)
             {
+                await _userBusinessRules.UserEmailCanNotBeDuplicatedWhenInserted(request.Email);
                 CreateUserDTO response = await _userService.CreateAsync(new()
                 {
                     Email = request.Email,

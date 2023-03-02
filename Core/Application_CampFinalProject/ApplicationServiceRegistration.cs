@@ -1,4 +1,7 @@
-﻿using MediatR;
+﻿using Application_CampFinalProject.Pipelines.Validation;
+using Application_CampFinalProject.Rules.User;
+using FluentValidation;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -15,6 +18,11 @@ namespace Application_CampFinalProject
         {
             collection.AddMediatR(typeof(ApplicationServiceRegistration));
             collection.AddAutoMapper(Assembly.GetExecutingAssembly());
+            collection.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+            collection.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));
+
+            collection.AddScoped<UserBusinessRules>();
+
 
         }
 

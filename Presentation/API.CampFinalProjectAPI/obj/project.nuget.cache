@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OWuebyxFk8g+oeFeGio4HJ3/dZ1A7voZlpsqxDhsGxHwnbo9urQMd/tf7xPMCW0WYUaBjVdm4JkWWVRwkQ0Jog==",
+  "dgSpecHash": "dNGCF/pIXFAlAPbMGIWQ7qIUdAM1WeQcAPhOPXJGMV9EE9yRZRCxfLLsc7Nsn6oOuGUboyT59GCh+wk8gToTMQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Presentation\\API.CampFinalProjectAPI\\API.CampFinalProjectAPI.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "C:\\Users\\e3b8u\\.nuget\\packages\\azure.core\\1.28.0\\azure.core.1.28.0.nupkg.sha512",
     "C:\\Users\\e3b8u\\.nuget\\packages\\azure.storage.blobs\\12.15.0\\azure.storage.blobs.12.15.0.nupkg.sha512",
     "C:\\Users\\e3b8u\\.nuget\\packages\\azure.storage.common\\12.14.0\\azure.storage.common.12.14.0.nupkg.sha512",
+    "C:\\Users\\e3b8u\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
+    "C:\\Users\\e3b8u\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.4.0\\fluentvalidation.dependencyinjectionextensions.11.4.0.nupkg.sha512",
     "C:\\Users\\e3b8u\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\e3b8u\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\e3b8u\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

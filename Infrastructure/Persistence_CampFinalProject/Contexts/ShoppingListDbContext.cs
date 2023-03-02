@@ -18,7 +18,7 @@ namespace API.CampFinalProjectAPI.Contexts
         public DbSet<ShoppingList> ShoppingLists { get; set; }
         public DbSet<ShoppingListItem> ShoppingListItems { get; set; }
 
-
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -61,7 +61,9 @@ namespace API.CampFinalProjectAPI.Contexts
                     .WithMany(l => l.ShoppingLists)
                     .HasForeignKey(s => s.UserId);
             });
-
+            //ilk migration da admin kullanıcısı tanımladık.
+            AppUser appUsers = new() { Id=new Guid().ToString(),Email = "admin@hotmail.com", UserName = "admin", NameSurname = "Yönetici Admin", PasswordHash = "A.123" };
+            modelBuilder.Entity<AppUser>().HasData(appUsers);
 
             base.OnModelCreating(modelBuilder);
 

@@ -171,6 +171,22 @@ namespace Persistence_CampFinalProject.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "00000000-0000-0000-0000-000000000000",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "482ddb29-4b2a-414b-8f0a-598fb5740139",
+                            Email = "admin@hotmail.com",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            NameSurname = "Yönetici Admin",
+                            PasswordHash = "A.123",
+                            PhoneNumberConfirmed = false,
+                            TwoFactorEnabled = false,
+                            UserName = "admin"
+                        });
                 });
 
             modelBuilder.Entity("Domain_CampFinalProject.Entities.Product", b =>
@@ -196,7 +212,11 @@ namespace Persistence_CampFinalProject.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<float>("Price")
+                        .HasColumnType("real");
+
                     b.Property<string>("ProductName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("UpdatedDate")

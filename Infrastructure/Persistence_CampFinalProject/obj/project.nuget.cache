@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Tsv+pj0a4uwA3P+RmGx0mN+cxvGfRPQz6OzZPkprwSlQBMmRhyt+nwpAOP04YXjKob7zNrBH7XO2A6+Ou1JdnQ==",
+  "dgSpecHash": "3stbc40ZL2WlxSpWrNJlL7UyCePvZqG9Vw/b3ETXqq7gURk4tU7neHtODL5H5OiTlthfi9MqcxGAcTcKUhdpiQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\e3b8u\\Desktop\\yazılım\\Back-end Camp\\ETP_CampFinalProject\\Infrastructure\\Persistence_CampFinalProject\\Persistence_CampFinalProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\e3b8u\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\e3b8u\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\e3b8u\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
+    "C:\\Users\\e3b8u\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.4.0\\fluentvalidation.dependencyinjectionextensions.11.4.0.nupkg.sha512",
     "C:\\Users\\e3b8u\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\e3b8u\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\e3b8u\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

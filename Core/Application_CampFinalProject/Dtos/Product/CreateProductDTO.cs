@@ -9,5 +9,6 @@ namespace Application_CampFinalProject.Dtos.Product
     public class CreateProductDTO
     {
         public string? ProductName { get; set; }
+        public float Price{ get; set; }
     }
 }

@@ -92,3 +92,5 @@ C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Presentation
 C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Presentation\API.CampFinalProjectAPI\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Presentation\API.CampFinalProjectAPI\bin\Debug\net6.0\System.IO.Hashing.dll
 C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Presentation\API.CampFinalProjectAPI\bin\Debug\net6.0\System.Memory.Data.dll
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Presentation\API.CampFinalProjectAPI\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\e3b8u\Desktop\yazılım\Back-end Camp\ETP_CampFinalProject\Presentation\API.CampFinalProjectAPI\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

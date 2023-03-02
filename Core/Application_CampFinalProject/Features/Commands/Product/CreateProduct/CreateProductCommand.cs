@@ -18,6 +18,7 @@ namespace Application_CampFinalProject.Features.Commands
         public int CategoryId { get; set; }
         public string? ProductName { get; set; }
         public string? Description { get; set; }
+        public float Price { get; set; }
         public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, CreateProductDTO>
         {
             private readonly IMapper _mapper;
