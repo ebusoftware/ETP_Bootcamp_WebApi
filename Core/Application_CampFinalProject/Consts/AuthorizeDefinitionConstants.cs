@@ -12,5 +12,6 @@ namespace Application_CampFinalProject.Consts
         public const string Brands = "Brands";
         public const string Categories = "Categories";
         public const string ShoppingListItems = "ShoppingListItems";
+        public const string ShoppingLists = "ShoppingLists";
     }
 }

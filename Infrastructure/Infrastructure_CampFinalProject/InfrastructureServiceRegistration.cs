@@ -1,6 +1,8 @@
 ﻿using Application_CampFinalProject.Abstractions;
 using Application_CampFinalProject.Abstractions.Storage;
 using Application_CampFinalProject.Abstractions.Token;
+using Application_CampFinalProject.Services.Configurations;
+using Infrastructure_CampFinalProject.Configurations;
 using Infrastructure_CampFinalProject.Enums;
 using Infrastructure_CampFinalProject.Services.Storage;
 using Infrastructure_CampFinalProject.Services.Storage.Azure;
@@ -21,6 +23,7 @@ namespace Infrastructure_CampFinalProject
         {
             serviceCollection.AddScoped<IStorageService, StorageService>();
             serviceCollection.AddScoped<ITokenHandler, TokenHandler>();
+            serviceCollection.AddScoped<IApplicationService, ApplicationService>(); 
         }
         public static void AddStorage<T>(this IServiceCollection serviceCollection) where T : Storage, IStorage
         {
