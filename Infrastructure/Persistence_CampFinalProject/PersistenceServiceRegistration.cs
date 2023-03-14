@@ -55,6 +55,8 @@ namespace Persistence_CampFinalProject
             services.AddScoped<IExternalAuthentication, AuthService>();
             services.AddScoped<IInternalAuthentication, AuthService>();
 
+            services.AddScoped<IRoleService, RoleService>();
+
 
 
 
