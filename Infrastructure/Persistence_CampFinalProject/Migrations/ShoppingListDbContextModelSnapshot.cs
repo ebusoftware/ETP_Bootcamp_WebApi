@@ -22,6 +22,21 @@ namespace Persistence_CampFinalProject.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("AppRoleEndpoint", b =>
+                {
+                    b.Property<int>("EndpointsId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("RolesId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("EndpointsId", "RolesId");
+
+                    b.HasIndex("RolesId");
+
+                    b.ToTable("AppRoleEndpoint");
+                });
+
             modelBuilder.Entity("Domain_CampFinalProject.Entities.Brand", b =>
                 {
                     b.Property<int>("Id")
@@ -69,6 +84,46 @@ namespace Persistence_CampFinalProject.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("Domain_CampFinalProject.Entities.Endpoint", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ActionType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Definition")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HttpType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MenuId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MenuId");
+
+                    b.ToTable("Endpoints");
                 });
 
             modelBuilder.Entity("Domain_CampFinalProject.Entities.Identity.AppRole", b =>
@@ -175,9 +230,9 @@ namespace Persistence_CampFinalProject.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "00000000-0000-0000-0000-000000000000",
+                            Id = "f0eb5e87-c17f-4dd6-9ed8-fa165dc76a94",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "482ddb29-4b2a-414b-8f0a-598fb5740139",
+                            ConcurrencyStamp = "6011b2e9-bd9d-4968-968d-a99cfee674c6",
                             Email = "admin@hotmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
@@ -187,6 +242,29 @@ namespace Persistence_CampFinalProject.Migrations
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         });
+                });
+
+            modelBuilder.Entity("Domain_CampFinalProject.Entities.Menu", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime?>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Menus");
                 });
 
             modelBuilder.Entity("Domain_CampFinalProject.Entities.Product", b =>
@@ -447,6 +525,32 @@ namespace Persistence_CampFinalProject.Migrations
                     b.ToTable("ProductProductImageFile");
                 });
 
+            modelBuilder.Entity("AppRoleEndpoint", b =>
+                {
+                    b.HasOne("Domain_CampFinalProject.Entities.Endpoint", null)
+                        .WithMany()
+                        .HasForeignKey("EndpointsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain_CampFinalProject.Entities.Identity.AppRole", null)
+                        .WithMany()
+                        .HasForeignKey("RolesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Domain_CampFinalProject.Entities.Endpoint", b =>
+                {
+                    b.HasOne("Domain_CampFinalProject.Entities.Menu", "Menu")
+                        .WithMany("Endpoints")
+                        .HasForeignKey("MenuId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Menu");
+                });
+
             modelBuilder.Entity("Domain_CampFinalProject.Entities.Product", b =>
                 {
                     b.HasOne("Domain_CampFinalProject.Entities.Brand", "Brand")
@@ -571,6 +675,11 @@ namespace Persistence_CampFinalProject.Migrations
             modelBuilder.Entity("Domain_CampFinalProject.Entities.Identity.AppUser", b =>
                 {
                     b.Navigation("ShoppingLists");
+                });
+
+            modelBuilder.Entity("Domain_CampFinalProject.Entities.Menu", b =>
+                {
+                    b.Navigation("Endpoints");
                 });
 
             modelBuilder.Entity("Domain_CampFinalProject.Entities.Product", b =>
