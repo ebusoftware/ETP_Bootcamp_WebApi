@@ -13,5 +13,9 @@ namespace Application_CampFinalProject.Services
     {
         Task<CreateUserDTO> CreateAsync(CreateUserCommand model);
         Task UpdateRefreshToken(string refreshToken, AppUser user, DateTime accessTokenDate, int addOnAccessTokenDate);
+        Task<List<ListUserDTO>> GetAllUsersAsync(int page, int size);
+        int TotalUsersCount { get; }
+        Task AssignRoleToUserAsnyc(string userId, string[] roles);
+        Task<string[]> GetRolesToUserAsync(string userId);
     }
 }

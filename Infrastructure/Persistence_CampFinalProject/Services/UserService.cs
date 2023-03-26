@@ -4,6 +4,7 @@ using Application_CampFinalProject.Features;
 using Application_CampFinalProject.Services;
 using Domain_CampFinalProject.Entities.Identity;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,6 +52,47 @@ namespace Persistence_CampFinalProject.Services
             }
             else
                 throw new UserException("Kullanıcı adı veya şifre yanlış.");
+        }
+        public async Task<List<ListUserDTO>> GetAllUsersAsync(int page, int size)
+        {
+            var users = await _userManager.Users
+                  .Skip(page * size)
+                  .Take(size)
+                  .ToListAsync();
+
+            return users.Select(user => new ListUserDTO
+            {
+                Id = user.Id,
+                Email = user.Email,
+                NameSurname = user.NameSurname,
+                TwoFactorEnabled = user.TwoFactorEnabled,
+                UserName = user.UserName
+
+            }).ToList();
+        }
+
+        public int TotalUsersCount => _userManager.Users.Count();
+
+        public async Task AssignRoleToUserAsnyc(string userId, string[] roles)
+        {
+            AppUser user = await _userManager.FindByIdAsync(userId);
+            if (user != null)
+            {
+                var userRoles = await _userManager.GetRolesAsync(user);
+                await _userManager.RemoveFromRolesAsync(user, userRoles);
+
+                await _userManager.AddToRolesAsync(user, roles);
+            }
+        }
+        public async Task<string[]> GetRolesToUserAsync(string userId)
+        {
+            AppUser user = await _userManager.FindByIdAsync(userId);
+            if (user != null)
+            {
+                var userRoles = await _userManager.GetRolesAsync(user);
+                return userRoles.ToArray();
+            }
+            return new string[] { };
         }
     }
 }
