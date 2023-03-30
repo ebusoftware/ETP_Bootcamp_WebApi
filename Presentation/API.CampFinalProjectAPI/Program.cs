@@ -1,4 +1,5 @@
-﻿using Application_CampFinalProject;
+﻿using API.CampFinalProjectAPI.Filters;
+using Application_CampFinalProject;
 using Infrastructure_CampFinalProject;
 using Infrastructure_CampFinalProject.Services.Storage.Azure;
 using Infrastructure_CampFinalProject.Services.Storage.Local;
@@ -15,6 +16,11 @@ builder.Services.AddPersistenceService();
 builder.Services.AddInfrastructureServices();
 
 builder.Services.AddStorage<LocalStorage>();
+
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<RolePermissionFilter>(); //Rol Filtresini belirttim.
+});
 
 // Add services to the container.
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -40,6 +46,7 @@ builder.Services.AddCors(options => options.AddDefaultPolicy(policy =>
 policy.WithOrigins("http://localhost:4200", "https://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowCredentials()
 
 ));
+
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

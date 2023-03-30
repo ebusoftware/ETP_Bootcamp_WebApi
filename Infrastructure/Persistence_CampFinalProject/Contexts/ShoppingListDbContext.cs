@@ -64,7 +64,7 @@ namespace API.CampFinalProjectAPI.Contexts
                     .HasForeignKey(s => s.UserId);
             });
             //ilk migration da admin kullanıcısı tanımladık.
-            AppUser appUsers = new() { Id=Guid.NewGuid().ToString(),Email = "admin@hotmail.com", UserName = "admin", NameSurname = "Yönetici Admin", PasswordHash = "A.123" };
+            AppUser appUsers = new() { Id=Guid.NewGuid().ToString(),Email = "admin@hotmail.com", UserName = "admin", NameSurname = "Yönetici Admin" };
             modelBuilder.Entity<AppUser>().HasData(appUsers);
 
             base.OnModelCreating(modelBuilder);
