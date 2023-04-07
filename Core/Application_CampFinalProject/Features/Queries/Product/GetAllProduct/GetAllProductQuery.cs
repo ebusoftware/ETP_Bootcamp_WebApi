@@ -14,6 +14,8 @@ namespace Application_CampFinalProject.Features.Queries
 {
     public class GetAllProductQuery:IRequest<List<GetAllProductDTO>>
     {
+        public int Page { get; set; } = 0;
+        public int Size { get; set; } = 5;
         public class GetAllProductQueryHandler : IRequestHandler<GetAllProductQuery, List<GetAllProductDTO>>
         {
             private readonly IProductReadRepository _productReadRepository;
@@ -28,6 +30,8 @@ namespace Application_CampFinalProject.Features.Queries
             public async Task<List<GetAllProductDTO>> Handle(GetAllProductQuery request, CancellationToken cancellationToken)
             {
                 List<GetAllProductDTO> products = _productReadRepository.GetAll(false)
+                    .Skip(request.Page * request.Size)
+                    .Take(request.Size)
                     .Include(e => e.Brand)
                     .Include(e => e.Category)
                     .Include(e => e.ProductImageFiles)

@@ -13,12 +13,12 @@ namespace API.CampFinalProjectAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes ="Admin")]
+    //[Authorize(AuthenticationSchemes ="Admin")]
     public class ProductController : BaseController
     {
         [HttpGet]
 
-        [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.Products,ActionType = ActionType.Reading,Definition ="Get Products")]
+        //[AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.Products,ActionType = ActionType.Reading,Definition ="Get Products")]
         public async Task<IActionResult> GetAll([FromQuery] GetAllProductQuery getAllProductQuery)
         {
             List<GetAllProductDTO> datas = await Mediator.Send(getAllProductQuery);
@@ -59,8 +59,6 @@ namespace API.CampFinalProjectAPI.Controllers
         [AuthorizeDefinition(Menu = AuthorizeDefinitionConstants.Products, ActionType = ActionType.Deleting, Definition = "Remove Product image")]
         public async Task<IActionResult> DeleteProductImage([FromRoute] RemoveProductImageCommand removeProductImageCommand, [FromQuery] int imageId)
         {
-            //Burada RemoveProductImageCommandRequest sınıfı içerisindeki ImageId property'sini de 'FromQuery' attribute'u ile işaretleyebilirdik!
-
             removeProductImageCommand.ImageId = imageId;
             RemoveImageFileDTO response = await Mediator.Send(removeProductImageCommand);
             return Ok();
